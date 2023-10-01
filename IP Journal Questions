@@ -1,0 +1,121 @@
+import pandas as pd
+import numpy as np
+from matplotlib import pyplot as plt
+
+# Q1
+# Creating from dictionary values
+# dic = {"One" : 1, "Two" : 2, "Three" : 3, "Four" : 4, "Five" : 5}
+# sr1 = pd.Series(dic)
+
+# # Creating from ndarray
+# sr2 = pd.Series(np.array([1, 2, 3, 4, 5]))
+# print(sr1)
+# print(sr2)
+
+
+# Q2
+# index_name = "Index"
+# sr = pd.Series(400, index = [i for i in [index_name] * len(index_name)])
+# print(sr)
+
+
+# Q3
+# temp1 = pd.Series([32, 45, 33, 44, 35, 36, 38], name = "Temp1")
+# print(temp1)
+
+
+# Q4
+# l = []
+# while True:
+#     n = input("Enter number (press 'q' when you want to exit): ")
+#     if n == "q":
+#         break
+#     l.append(int(n))
+# sr = pd.Series(l)
+# print(sr)
+
+
+# Q5
+# sr = pd.Series(np.arange(41, 60, 2.5))
+# print(sr)
+
+
+# Q6
+# df = pd.DataFrame({
+#     "Name" : ["Anirban", "Mieeth", "Riddhi", "Arinjoy"],
+#     "Sections" : ["A", "B", "C", "D"],
+#     "Result" : [63, 55, 57, 54]
+# }, index = [1, 2, 3, 4])
+# print("Row Labels", df.index)
+# print("Column Labels", df.columns)
+# print("Type of Name", df["Name"].dtype)
+# print("Type of Sections", df["Sections"].dtype)
+# print("Type of Result", df["Result"].dtype)
+# print("Dimensions", df.ndim)
+
+
+# Q7
+# df = pd.DataFrame({
+#     "Name" : ["Anirban", "Mieeth", "Riddhi", "Arinjoy"],
+#     "Sections" : ["A", "B", "C", "D"],
+#     "Result" : [63, 55, 57, 54]
+# }, index = [1, 2, 3, 4])
+# for x, y in df.iterrows():
+#     print("Row Label: ", x)
+#     print(y)
+
+
+# Q8
+# df = pd.DataFrame({
+#     "Name" : ["Anirban", "Mieeth", "Riddhi", "Arinjoy"],
+#     "Sections" : ["A", "B", "C", "D"],
+#     "Result" : [63, 55, 57, 54]
+# }, index = [1, 2, 3, 4])
+# for x, y in df.items():
+#     print(y)
+
+
+# Q9
+# sales = pd.DataFrame({
+#     "2018" : [110, 130, 115, 118],
+#     "2019" : [205, 165, 206, 198],
+#     "2020" : [117, 175, 157, 183],
+#     "2021" : [189, 190, 179, "169"]
+# }, index = ["Kapil", "Kamini", "Shikhar", "Mohini"])
+# print(sales)
+
+# print(sales.index)
+
+# print(sales.columns)
+
+# for i in range(4):
+#     print(sales.iloc[:, i].dtype)
+
+# print(sales.ndim)
+
+# print(sales.shape)
+
+# print(sales.size)
+
+# print(sales.values)
+
+
+# Q10
+# df = pd.DataFrame({
+#     "Name" : ["Sanjeev", "Keshav", "Rahul"],
+#     "Age" : [37, 42, 38],
+#     "Designation" : ["Manager", "Clerk", "Accountant"]
+# })
+# print(df.sort_values(['Age']))
+
+
+# Q11
+# RIP
+
+
+# Q12
+# df = pd.DataFrame({
+#     "IP":[45,55,78,95,99,97], "CS":[87,89,98,94,78,77]
+
+# })
+# print(df["CS"].sum())
