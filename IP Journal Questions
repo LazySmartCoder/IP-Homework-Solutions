@@ -215,20 +215,61 @@ from matplotlib import pyplot as plt
 # df.to_csv("Student_result.csv", index=False)
 
 # Q23
-# df = pd.DataFrame({
+# marks = {
+#     "IP" : np.random.randint(1, 100, 5),
+#     "Hindi" : np.random.randint(1, 100, 5),
+#     "BST" : np.random.randint(1, 100, 5),
+#     "Physics" : np.random.randint(1, 100, 5),
+#     "Maths" : np.random.randint(1, 100, 5),
+#     "Acc" : np.random.randint(1, 100, 5),
+#     "Eng" : np.random.randint(1, 100, 5)
+# }
+# df1 = pd.DataFrame({
 #     "Years" : [2016, 2017, 2018, 2019, 2020],
-#     "Results" : [98, 97, 100, 60, 84]
+#     "Results" : [98, 97, 100, 60, 84],
+#     "Students" : [1, 2, 3, 4, 5],
 # })
+# df2 = pd.DataFrame(marks)
 # plt.title("ABC School")
 # plt.xlabel("Years")
 # plt.ylabel("Results")
-# plt.bar(df.Years, df.Results)
+# plt.bar(df1.Years, df1.Results)
 # plt.show()
 
 
 # Q24
-# Nahi pata maam se pucha hai
+# marks = {
+#     "IP" : np.random.randint(1, 100, 5),
+#     "Hindi" : np.random.randint(1, 100, 5),
+#     "BST" : np.random.randint(1, 100, 5),
+#     "Physics" : np.random.randint(1, 100, 5),
+#     "Maths" : np.random.randint(1, 100, 5),
+#     "Acc" : np.random.randint(1, 100, 5),
+#     "Eng" : np.random.randint(1, 100, 5)
+# }
+# df1 = pd.DataFrame({
+#     "Years" : [2016, 2017, 2018, 2019, 2020],
+#     "Results" : [98, 97, 100, 60, 84],
+#     "Students" : [1, 2, 3, 4, 5],
+# })
+# df2 = pd.DataFrame(marks)
+# plt.title("Scores in all 7 subjects of all students")
+# plt.xlabel("Students")
+# plt.ylabel("Scores")
+# x = df1.Students
+# plt.plot(x, df2.values)
+# plt.xticks(x , ["A", "B", "C", "D", "E"])
+# plt.show()
 
+# high = []
+# for i in df2.values.T:
+#     high.append(max(i))
+# plt.title("Highest scores in all subjects")
+# plt.xlabel("Subjects")
+# plt.ylabel("Scores")
+# plt.plot(marks.keys(), high)
+# print(high)
+# plt.show()
 
 # Q25
 # df = pd.read_csv("data.csv")
