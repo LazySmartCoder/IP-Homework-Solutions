@@ -46,8 +46,7 @@ from matplotlib import pyplot as plt
 #     "Sections" : ["A", "B", "C", "D"],
 #     "Result" : [63, 55, 57, 54]
 # }, index = [1, 2, 3, 4])
-# print("Row Labels", df.index)
-# print("Column Labels", df.columns)
+# print("Row Labels and Column Labels", df.axes)
 # print("Type of Name", df["Name"].dtype)
 # print("Type of Sections", df["Sections"].dtype)
 # print("Type of Result", df["Result"].dtype)
@@ -110,7 +109,19 @@ from matplotlib import pyplot as plt
 
 
 # Q11
-# RIP
+# df=pd.DataFrame({
+#    "Players":["Hardik","KL Rahul","Andre Russel","Jasprit Bumrah", "Virat Kohli", "Rohit Sharma"],
+#    "Team":["Mumbai Indians","Kings Eleven","Kolkata Knight riders","Mumbai Indians","RCB","Mumbai Indians"],
+#    "Category":["Batsman","Batsman","Batsman","Bowler","Batsman","Batsman"],
+#    "BidPrice":[13,12,7,10,17,15],
+#    "Runs":[1000,2400,900,200,3600,3700]
+#    })
+
+# print(df.head(2))
+# print(df.tail(3))
+
+# df.drop([3, 5], inplace=True)
+# print(df)
 
 
 # Q12
@@ -119,3 +130,114 @@ from matplotlib import pyplot as plt
 
 # })
 # print(df["CS"].sum())
+
+
+# Q13
+# df = pd.DataFrame({
+#     "Name" : ["A", "B", "C", "D"],
+#     "Age" : [50, 60, 70, 80],
+#     "Gender" : ["M", "F", "M", "F"]
+# })
+# del df["Age"]
+# print(df)
+
+
+# Q14
+# df = pd.read_csv("Student_result.csv")
+
+# print(df.axes)
+# for i in range(3):
+#     print(df.iloc[:, i].dtype)
+# print(df.ndim)
+# print(df.shape)
+
+
+# Q15
+# df = pd.read_csv("Student_result.csv")
+# print(df[["Adm_No", "Gender", "Percentage"]])
+# print(df.head())
+# print(df.tail())
+
+
+# Q16
+# Match =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# Runs =  [6, 0, 2, 5, 10, 20, 15, 6, 18, 12]
+# plt.xlabel("Match")
+# plt.ylabel("Runs Scored")
+# plt.plot(Match, Runs)
+# plt.show()
+
+
+# Q17
+# time = ["9AM", "10AM", "11AM", "12PM", "1PM"]
+# temp = [34, 37, 39, 38, 36.5]
+# plt.xlabel("Time")
+# plt.ylabel("Temperature in Celcius")
+# plt.plot(time, temp)
+# plt.show()
+
+
+# Q18
+# p, q, r, s = [1,3,6,7,9],[5,2,7,8,2],[2,4,6,8,10],[8,6,2,5,6]
+# remaining
+
+
+# Q19
+# plt.xlabel("Ages")
+# plt.ylabel("Populations in Units")
+# plt.title("Population Graph")
+# plt.hist([22, 55, 62, 45, 21, 22,34,42,42,4,99,102,110,120,121,122,130,111,115,112,80,75,65,54,44,43,42,48], bins = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110,120,130])
+# plt.show()
+
+
+# Q20
+# pop = [8.6, 8, 7.8, 6.4]
+# lang = ["Python", "Java", "PHP", "JavaScript"]
+# plt.ylabel("Languages")
+# plt.xlabel("Popularity")
+# plt.title("Language Popularity Chart")
+# plt.barh(lang, pop)
+# plt.show()
+
+
+# Q21
+# Same as Q15
+
+
+# Q22
+# df = pd.read_csv("Student_result.csv")
+# print(df)
+# for x, y in df.iterrows():
+#     if y.Percentage < 40:
+#         print(y.Percentage)
+#         df.loc[x, "Percentage"] = np.nan
+# print(df)
+# df.to_csv("Student_result.csv", index=False)
+
+# Q23
+# df = pd.DataFrame({
+#     "Years" : [2016, 2017, 2018, 2019, 2020],
+#     "Results" : [98, 97, 100, 60, 84]
+# })
+# plt.title("ABC School")
+# plt.xlabel("Years")
+# plt.ylabel("Results")
+# plt.bar(df.Years, df.Results)
+# plt.show()
+
+
+# Q24
+# Nahi pata maam se pucha hai
+
+
+# Q25
+# df = pd.read_csv("data.csv")
+# df = df.iloc[:5, [1, 2]]
+# plt.title("Crime Cases Report by Govt of India")
+# plt.xlabel("Crime Head")
+# plt.ylabel("Crime Numbers")
+# plt.grid()
+# plt.plot(df.iloc[:, 0], df.iloc[:, 1], "ro", linewidth = 0.9, linestyle = "--", markeredgecolor = "b")
+# plt.show()
+
+
